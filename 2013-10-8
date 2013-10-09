@@ -1,0 +1,49 @@
+##Stat 157 Presentations:
+
+###Group 1
+	*imported useful packages in Python to create two text files: Learning and Personal	- created a text output (cleaner than original raw data)
+	*used R to format the data and analyze
+	*high numbers: comfortable being a generalist; low numbers: specific learning style
+	*summaries of learning styles: bar charts
+
+###Group 3
+	*analyzed VARK and always/often/sometimes/not often for how often they were administrators, visualizers, etc.
+	*Aha moment: collaboration and passing things between each other
+
+###Group 4
+	*VARK and personal experience in the topics
+	*conclusion: maybe people weren't taking the survey seriously
+	*reorganize the class so that we have more technical leads
+	*learning style scores for each student
+
+###Group 5
+	*traits of technical leads; see a somewhat positive correlation between the number of topics someone knows and the likelihood to be a technical lead
+	*used a bubble graph to show the extent of knowledge someone knows
+	*takeaway: people who are read/write know the least programs
+
+###Group 6
+	*focused on one entity
+
+###Group 7
+	*tried to see if the distributions were normal; used QQ plots, saw it was skewed
+	*scatterplot matrix and heat map of the correlation
+
+###Group 8
+	*used R to do the data analysis
+
+###Group 9
+	*had several roadblocks
+	*was short one person in the team; did not have a curator
+
+###Group 10
+	*could not figure out python notebook and so used R
+	*focused on types of languages used and learning style (VARK)
+	*word cloud: R is the most commonly used 
+	  *best graphic
+	  
+###Group 11
+**our group!
+
+
+
+	
