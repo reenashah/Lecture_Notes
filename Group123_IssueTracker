@@ -1,0 +1,23 @@
+###Group 1
+
+  
+###Group 2
+
+- very clear and detailed instructions regarding installations and code to run
+- well-commented
+
+Roadblocks when running code:
+- error: DictionaryPrint is not defined 
+- NameErrors
+- error is preventing plots from displaying on iPython Notebook
+
+--> maybe they changed their code, which caused the code to break once run
+
+###Group 3
+
+- successfully accessed iPython Notebook
+- R Code
+  - extremely well-commented
+  - provides user with exact specifications for what to download and where to implement the code
+- Note that the code will only work for this data
+  - the algorithm is not very dynamic
