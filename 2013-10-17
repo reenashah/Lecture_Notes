@@ -1,0 +1,124 @@
+###Geospatial Innovation Facility
++freely available base layer idea
+	- sensored data
+	- photos
+	- ecological data
++ creating an engine so people can look at the events database and base layer database and access it through the API
+	- design a front-end so regular users can mess with the data themselves
+	- allow people to build applications around it and create more tools
+
+###Magnitude-Dependent Automatic Alarms
++ can weather predict earthquakes; saw that it's not very accurate
++ Samsi is an institute interested in earthquakes
+	- ETAS (epidemic type aftershock sequence) used to predict earthquakes
+		- cobbles together empirical relationships
+		- treats rates as probabilities
+
++The Rabbit Axiom (from last time)
+	- cannot pull a rabbit from a hat unless at least 1 rabbit has been previously pulled
+	--> cannot turn a rate into a probability without assuming the phenomenon is random in the first place
+	--> can't borrow a rabbit from an empty hat 
+
++ Comparing an Earthquake with a Casino
+	- physics of earthquakes may be stochastic
+	- might appear to be random (though they may not really be)
+	- stochastic models may be useful for predicting future seismology 
+
++Seismicity Models
+	- Poisson Model  
+		- rate of distribution is proptional to integral of underlying density of rate over the region of space and time  
+		- rate is assumed to be constant   
+		- it is clear that earthquakes doesn't follow this; very clustered  
+	+ poisson for declustered catalogs  
+		- poisson if you remove aftershocks and foreshocks  
+		- it's a matter of definition at this point; depends on how you decluster the data  
+		- it's obvious that if you remove enough events, it will be poisson   
+			- how few can you remove to pass as being poisson?  
+	+ gamma renewal
+	+ ETAS
+
+###Data from SCEC (Southern California Earthquake Center)
+	+ we will focus on data from this source
+	+ Do declustered methods yield spatiotemporal poisson processes?
+		
+###Think About Poisson Behavior:
++ test whether events come from a poisson process from time 0 to time t
+
+###Can We Use Overall Seismicity to Predict?
++ fit a gamma renewal model
++ big gap between the cdf's 
+	- what actually happens versus fitting an ETAS model versus fitting a gamma renewal model 
++ difference between empirical distribution and theoretical distributions 
+	- K-S test assumes you've fixed the distribution 
+		- can't used it because we just fit the data 
+	- BUT you can use simulations to calculate it 
+	- if it really were the underlying theoretical distribution, the change it would differ is small; strong statistical evidence that ETAS and Gamma are not likely models 
+
+###Automatic Alarms and MDA's
++ automatic alarm: after every event, start an alarm duration [stupid]
++ magnitude dependent automatic alarm (MDA)  
+	- after every event with M>mu, start an alarm of duration (tao)(u)^(M); 1 free parameter (u)  
+	- optimal ETAS predictor: level set of conditional inesnsity  
+	- given x, what's the probability you'll have an earthquake   
+		- have an alarm that's on when the density is high  
+	- look at level sets of conditional insanity  
+		- optimal thing to do if it really follow ETAS model  
++ ETAS model has a bunch of parameters: K, alpha, c, p  
++ MDA alarms v ETAS  
+	- good predictor when the truth is ETAS  
++ MDA alarms v real data  
+
+####Term Project:
++ think about other forms that will empirically fit and work better than ETAS model
++ a different functional form may allow us to make it a better fit
+
+
+####What is ETAS
++ epidemic-type aftershock sequence
++ some events are unpredictable "background" mainshocks
+	- some are aftershocks
+	- aftershocks can have aftershocks
++ 2 empirical relationships:
+	1. Gutenberg-Richter law: power law for magnitude/frequency  
+		- if you see 10 magnitude 7s, you should see 1/10th magnitude 8's  
+	2. Omori-Utsu law: rate of aftershocks decays like power law  
+		- constant/(constant + time)^p  
+		- many free parameters  
+		- integrating will tell you how many aftershocks you expect to get for a single earthquake; if p>1, this number is finite  
+
++ magnitude independent of time, same distribution for main and aftershocks  
+	- rate of aftershocks tends to decay roughly as a fraction of the power of time  
++ model events above some threshold magnitude m0
+
+####ETAS Untangled
++ Hox model
++ children can have children, etc.
++ can be unstable if p<=1; have more events until earthquakes happen all the time
++ can have long times until reaches stationary point of process
++ if p is between 1 and 2, it takes a long time to reach stationary state; if p>=2, it will give you a finite and stationary solution
+
+####Fitting ETAS to Data: 
+#####EM Algorithm
++ use likelihood to classify the events into background and aftershock; keep going back and forth
++ under fairly general conditions, that's a convergent algorithms
+
+####Simulating ETAS: later
+
+#####Using ETAS to predict
++ optimal predictor is conditional intensity  
+	- build the entire conditional intensity function for the catalog  
+	- estimate the parameters  
+	- based on that, when you look at the actual catalog, when you plug into the formula to get the conditional intensity, there will be an issue of what was the intensity when you first arrived  
+		- depends on history before that  
+		- take the starting point of the conditional intensity to be the ending point of the conditional intensity  
+			- that makes it the most favorable  
++ use ETAS to predict by plugging into the formula  
+
+#####Next Steps:
++ reach Brad Luen
++ install etas.f
++ download data from SCEC
++ replicate
++ develop algorithm to do tuning
++ train, test, iterate
++ document and submit for application
