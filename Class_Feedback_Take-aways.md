@@ -1,4 +1,4 @@
-###analyzed all class feedback analysis from the forms sent out and synthesized it to use in the presentation
+- analyzed all class feedback analysis from the forms sent out and synthesized it to use in the presentation
 
 ##Inter team Collaboration
 prior to taking this course, most students felt that group work primarily meant that individuals perform tasks separately, and the only thing drawing the group together was the final product (compiling all of the work to create a cohesive product)
